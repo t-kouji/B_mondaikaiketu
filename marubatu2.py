@@ -58,6 +58,14 @@ def com_intelligence():
                 if j in l_remaining:
                     print("com繋ぎの一手")
                     return j
+    
+    """そうじゃなかったらpotential_selfの各要素の要素数を調べ2こだったらその値を選択"""
+    for i in potential_self:
+        if len(i) == 2:
+            for j in i:
+                if j in l_remaining:
+                    print("com繋ぎの一手")
+                    return j
         
     """そうじゃなかったらl_remainingの中からランダムに選ぶ""" 
     print("com最初の一手")
